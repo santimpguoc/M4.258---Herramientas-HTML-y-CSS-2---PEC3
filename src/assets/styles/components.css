@@ -1,0 +1,44 @@
+/**
+ * components.css
+ * Capa de componentes reutilizables (PEC 3)
+ * Uso controlado de @apply para patrones recurrentes
+ */
+
+@layer components {
+
+  /* --------------------------------------------------
+   * Botón principal
+   * -------------------------------------------------- */
+  .btn-primary {
+    @apply inline-flex items-center justify-center
+           px-4 py-2
+           rounded-md
+           font-semibold
+           bg-brand text-white
+           hover:opacity-90
+           transition;
+  }
+
+  /* --------------------------------------------------
+   * Tarjeta base
+   * -------------------------------------------------- */
+  .card {
+    @apply rounded-xl
+           border border-borde
+           bg-white
+           p-6
+           shadow-card;
+  }
+
+  /* --------------------------------------------------
+   * Título de sección
+   * -------------------------------------------------- */
+  .section-title {
+    @apply font-heading
+           text-2xl
+           font-bold
+           tracking-tight
+           text-tinta;
+  }
+
+}
