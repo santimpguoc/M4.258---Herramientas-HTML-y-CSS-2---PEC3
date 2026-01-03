@@ -1,85 +1,86 @@
 <footer class="mt-10 border-t border-borde">
-
-  <!-- BLOQUE SUPERIOR (barra clara con logo + navegación + redes) -->
+  <!-- BLOQUE SUPERIOR -->
   <div class="bg-white">
-    <div class="max-w-container mx-auto flex flex-col gap-6 px-4 py-8 md:flex-row md:items-center md:justify-between">
+    <div class="max-w-7xl mx-auto flex flex-col items-center gap-4 px-4 py-5 md:flex-row md:justify-between">
 
       <!-- Logo -->
-      <div class="flex items-center gap-3">
-        <a href="index.html" class="flex items-center gap-3">
-          <img
-            src="assets/images/logo.png"
-            alt="Logotipo de las Jornadas de Cocina Tradicional"
-            class="h-10 w-10"
-            width="40"
-            height="40"
-            loading="lazy"
-          />
-          <span class="font-heading text-lg font-bold tracking-tight text-tinta">
-            Jornadas de Cocina Tradicional
-          </span>
-        </a>
-      </div>
+      <a href="index.html" class="flex flex-col items-center gap-2 md:flex-row md:items-center md:gap-3">
+        <img
+          src="assets/images/logo.png"
+          alt="Logotipo de las Jornadas de Cocina Tradicional"
+          class="h-28 w-28 md:h-20 md:w-20"
+          width="96"
+          height="96"
+          loading="lazy"
+        />
+        <span class="hidden font-base text-base tracking-wide text-brand md:inline">
+          Jornadas de Cocina Tradicional
+        </span>
+      </a>
 
-      <!-- Navegación -->
-      <ul class="flex flex-col items-start gap-2 text-sm md:flex-row md:items-center md:gap-5 md:text-base">
-        <li><a href="index.html" class="underline-offset-4 hover:underline">Portada</a></li>
-        <li><a href="participantes.html" class="underline-offset-4 hover:underline">Participantes</a></li>
-        <li><a href="programacion.html" class="underline-offset-4 hover:underline">Programación</a></li>
-        <li><a href="inscripcion.html" class="underline-offset-4 hover:underline">Inscripciones</a></li>
+      <!-- Navegación (centrada en desktop) -->
+      <ul class="flex flex-wrap items-center justify-center gap-6 text-base text-tinta/70 md:gap-8">
+        <li><a href="index.html" class="font-medium underline-offset-8 decoration-2 hover:text-brand hover:underline">Portada</a></li>
+        <li><a href="participantes.html" class="font-medium underline-offset-8 decoration-2 hover:text-brand hover:underline">Participantes</a></li>
+        <li><a href="programacion.html" class="font-medium underline-offset-8 decoration-2 hover:text-brand hover:underline">Programación</a></li>
+        <li><a href="inscripcion.html" class="font-medium underline-offset-8 decoration-2 hover:text-brand hover:underline">Inscripciones</a></li>
       </ul>
 
-      <!-- Redes sociales -->
+      <!-- Redes sociales (círculos brand) -->
       <div class="flex items-center gap-3">
         <a
           href="https://instagram.com"
           aria-label="Instagram"
           target="_blank"
           rel="noopener noreferrer"
-          class="rounded-md border border-borde bg-piedra p-2 hover:opacity-90 transition"
+          class="inline-flex items-center justify-center transition hover:opacity-90"
         >
           <img
             src="assets/images/icons/icon-instagram.png"
             alt="Instagram"
-            class="h-6 w-6"
+            class="h-9 w-9"
+            width="36"
+            height="36"
           />
-        </a>
-
+        </a>  
         <a
           href="https://x.com"
-          aria-label="X"
+          aria-label="x (antes Twitter)"
           target="_blank"
           rel="noopener noreferrer"
-          class="rounded-md border border-borde bg-piedra p-2 hover:opacity-90 transition"
+          class="inline-flex items-center justify-center transition hover:opacity-90"
         >
           <img
             src="assets/images/icons/icon-x.png"
-            alt="X"
-            class="h-6 w-6"
+            alt="x (antes Twitter)"
+            class="h-9 w-9"
+            width="36"
+            height="36"
           />
-        </a>
-
+        </a>  
         <a
           href="https://facebook.com"
           aria-label="Facebook"
           target="_blank"
           rel="noopener noreferrer"
-          class="rounded-md border border-borde bg-piedra p-2 hover:opacity-90 transition"
+          class="inline-flex items-center justify-center transition hover:opacity-90"
         >
           <img
             src="assets/images/icons/icon-facebook.png"
             alt="Facebook"
-            class="h-6 w-6"
+            class="h-9 w-9"
+            width="36"
+            height="36"
           />
-        </a>
+        </a>  
       </div>
 
     </div>
   </div>
 
-  <!-- BLOQUE INFERIOR (barra oscura con créditos) -->
-  <div class="bg-tinta text-white">
-    <div class="max-w-container mx-auto px-4 py-6 text-center">
+  <!-- BLOQUE INFERIOR (azul marino) -->
+  <div class="bg-bgcredit text-white">
+    <div class="max-w-7xl mx-auto px-4 py-5 text-center">
       <p class="text-sm leading-relaxed text-white/90">
         &copy; 2025 Jornadas de Cocina Tradicional · Proyecto desarrollado para la asignatura
         <strong>Herramientas HTML y CSS 2 (UOC)</strong> por <strong>Santiago Martín-Palomo García</strong>.<br />
@@ -87,5 +88,4 @@
       </p>
     </div>
   </div>
-
 </footer>

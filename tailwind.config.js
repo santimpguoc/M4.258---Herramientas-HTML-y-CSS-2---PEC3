@@ -14,6 +14,7 @@ module.exports = {
         },
         borde: "#E6D8C9",
         white: "#FFFFFF",
+        bgcredit: "#001a66" /* Azul wireframe PEC */
       },
 
       fontFamily: {
