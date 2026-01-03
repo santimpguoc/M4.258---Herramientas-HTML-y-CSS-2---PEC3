@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       colors: {
         brand: "#B33A2B",        // teja
-        albero: "#D9B148",
+        albero: "#d9a441",
         piedra: "#f7f3ee",
         olivo: "#677B50",
         tinta: {
