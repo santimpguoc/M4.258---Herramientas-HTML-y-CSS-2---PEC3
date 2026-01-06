@@ -4,162 +4,184 @@
     <meta charset="utf-8" />
     <title>Participantes · IV Jornadas de Cocina Tradicional</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="assets/styles/main.css">
+    <link rel="stylesheet" href="assets/styles/main.css" />
   </head>
 
-  <body class="page page--participantes">
-    <include src="components/header.html"></include>
+  <body class="min-h-screen bg-piedra text-tinta font-base">
+    <!-- HEADER -->
+    <include src="./components/header.html"></include>
 
-    <main class="page__main">
-      <section class="participants">
-        <div class="container">
-          <header class="participants__header text-center">
-            <h1 class="participants__title">Participantes</h1>
-            <p class="participants__intro">
-              Tendremos el placer de contar con las siguientes cocineras y cocineros que compartirán sus recetas, técnicas y
-              experiencia durante las jornadas.
-            </p>
-          </header>
+    <!-- MAIN -->
+    <main>
+      <section class="max-w-7xl mx-auto px-4 py-10 md:py-14">
 
-          <div class="participants__grid">
-            <!-- 1. Luis Herrera -->
-            <article class="participant-card card participants__item">
-              <img
-                src="assets/images/participantes/luis-herrera.png"
-                alt="Retrato del chef Luis Herrera"
-                class="participant-card__image card-img-top"
-                loading="lazy"
-              />
-              <div class="card-body participant-card__body">
-                <h2 class="participant-card__name card-title">Luis Herrera</h2>
-                <p class="participant-card__role">
-                  Chef ejecutivo – Restaurante <span>La Alacena Vieja</span> (León)
-                </p>
-                <p class="participant-card__text card-text">
-                  Luis Herrera lleva más de 35 años entre fogones rescatando
-                  recetas de pueblo y adaptándolas a los gustos actuales. Es
-                  conocido por sus potajes lentos, sus cocidos de temporada y
-                  por su defensa del producto local de montaña.
-                </p>
-              </div>
-            </article>
+        <!-- Cabecera -->
+        <header class="mx-auto max-w-3xl text-center">
+          <h1 class="font-heading text-5xl font-bold tracking-tight text-brand md:text-5xl">
+            Participantes
+          </h1>
+          <p class="mt-4 text-xl leading-relaxed text-tinta/80 md:text-xl">
+            Tendremos el placer de contar con las siguientes cocineras y cocineros que
+            compartirán sus recetas, técnicas y experiencia durante las jornadas.
+          </p>
+        </header>
 
-            <!-- 2. Marina Sanz -->
-            <article class="participant-card card participants__item">
-              <img
-                src="assets/images/participantes/marina-sanz.png"
-                alt="Retrato de la chef Marina Sanz"
-                class="participant-card__image card-img-top"
-                loading="lazy"
-              />
-              <div class="card-body participant-card__body">
-                <h2 class="participant-card__name card-title">Marina Sanz</h2>
-                <p class="participant-card__role">
-                  Jefa de cocina – Casa de Comidas <span>El Candil</span> (Sevilla)
-                </p>
-                <p class="participant-card__text card-text">
-                  Marina Sanz ha convertido el recetario familiar en la base de
-                  una cocina honesta y cercana. Domina los guisos de verduras,
-                  los estofados de pescado y los postres de cuchara que se
-                  servían en las casas de barrio de toda la vida.
-                </p>
-              </div>
-            </article>
+        <!-- Grid de participantes -->
+        <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
 
-            <!-- 3. Daniel Okoro -->
-            <article class="participant-card card participants__item">
-              <img
-                src="assets/images/participantes/daniel-okoro.png"
-                alt="Retrato del chef Daniel Okoro"
-                class="participant-card__image card-img-top"
-                loading="lazy"
-              />
-              <div class="card-body participant-card__body">
-                <h2 class="participant-card__name card-title">Daniel Okoro</h2>
-                <p class="participant-card__role">
-                  Chef invitado – <span>Aromas del Sur</span> (Lisboa)
-                </p>
-                <p class="participant-card__text card-text">
-                  Daniel Okoro combina técnicas de la cocina de África occidental
-                  con productos del Atlántico y del Mediterráneo. Sus currys
-                  suaves, estofados aromáticos y panes especiados ponen en valor
-                  la cocina de mercado y el uso responsable de las especias.
-                </p>
-              </div>
-            </article>
+          <!-- 1. Luis Herrera -->
+          <article class="overflow-hidden rounded-2xl border border-albero bg-white shadow-lg shadow-card">
+            <img
+              src="assets/images/participantes/luis-herrera.png"
+              alt="Retrato del chef Luis Herrera"
+              class="h-56 w-full object-cover"
+              loading="lazy"
+            />
+            <div class="p-6">
+              <h2 class="font-heading text-2xl font-bold tracking-tight">
+                Luis Herrera
+              </h2>
+              <p class="mt-2 text-l font-base text-brand/80">
+                Chef ejecutivo – Restaurante <em>La Alacena Vieja</em> (León)
+              </p>
+              <p class="mt-4 text-l leading-relaxed text-tinta/80">
+                Luis Herrera lleva más de 35 años entre fogones rescatando recetas de
+                pueblo y adaptándolas a los gustos actuales. Es conocido por sus
+                potajes lentos, sus cocidos de temporada y por su defensa del producto
+                local de montaña.
+              </p>
+            </div>
+          </article>
 
-            <!-- 4. Ricardo Valdés -->
-            <article class="participant-card card participants__item">
-              <img
-                src="assets/images/participantes/ricardo-valdes.png"
-                alt="Retrato del chef Ricardo Valdés"
-                class="participant-card__image card-img-top"
-                loading="lazy"
-              />
-              <div class="card-body participant-card__body">
-                <h2 class="participant-card__name card-title">Ricardo Valdés</h2>
-                <p class="participant-card__role">
-                  Asesor gastronómico y formador culinario
-                </p>
-                <p class="participant-card__text card-text">
-                  Con una trayectoria en restaurantes de Francia, Italia y
-                  España, Ricardo Valdés se centra en reinterpretar platos
-                  clásicos con técnicas modernas. Sus talleres se enfocan en
-                  fondos, salsas y tiempos de cocción largos para conseguir
-                  sabores profundos y equilibrados.
-                </p>
-              </div>
-            </article>
+          <!-- 2. Marina Sanz -->
+          <article class="overflow-hidden rounded-2xl border border-albero bg-white shadow-lg shadow-card">
+            <img
+              src="assets/images/participantes/marina-sanz.png"
+              alt="Retrato de la chef Marina Sanz"
+              class="h-56 w-full object-cover"
+              loading="lazy"
+            />
+            <div class="p-6">
+              <h2 class="font-heading text-2xl font-bold tracking-tight">
+                Marina Sanz
+              </h2>
+              <p class="mt-2 text-l font-base text-brand/80">
+                Jefa de cocina – Casa de Comidas <em>El Candil</em> (Sevilla)
+              </p>
+              <p class="mt-4 text-l leading-relaxed text-tinta/80">
+                Marina Sanz ha convertido el recetario familiar en la base de una
+                cocina honesta y cercana. Domina los guisos de verduras, los
+                estofados de pescado y los postres de cuchara que se servían en las
+                casas de barrio de toda la vida.
+              </p>
+            </div>
+          </article>
 
-            <!-- 5. Javier Montalvo -->
-            <article class="participant-card card participants__item">
-              <img
-                src="assets/images/participantes/javier-montalvo.png"
-                alt="Retrato del chef Javier Montalvo"
-                class="participant-card__image card-img-top"
-                loading="lazy"
-              />
-              <div class="card-body participant-card__body">
-                <h2 class="participant-card__name card-title">Javier Montalvo</h2>
-                <p class="participant-card__role">
-                  Chef propietario – Bistró <span>Fogón de Barrio</span> (Madrid)
-                </p>
-                <p class="participant-card__text card-text">
-                  Javier Montalvo trabaja con pequeños productores y producto de
-                  temporada para crear versiones modernas de platos de toda la
-                  vida. Sus croquetas, guisos en raciones pequeñas y cazuelas
-                  compartidas son el sello de su propuesta cercana y actual.
-                </p>
-              </div>
-            </article>
+          <!-- 3. Daniel Okoro -->
+          <article class="overflow-hidden rounded-2xl border border-albero bg-white shadow-lg shadow-card">
+            <img
+              src="assets/images/participantes/daniel-okoro.png"
+              alt="Retrato del chef Daniel Okoro"
+              class="h-56 w-full object-cover"
+              loading="lazy"
+            />
+            <div class="p-6">
+              <h2 class="font-heading text-2xl font-bold tracking-tight">
+                Daniel Okoro
+              </h2>
+              <p class="mt-2 text-l font-base text-brand/80">
+                Chef invitado – <em>Aromas del Sur</em> (Lisboa)
+              </p>
+              <p class="mt-4 text-l leading-relaxed text-tinta/80">
+                Daniel Okoro combina técnicas de la cocina de África occidental con
+                productos del Atlántico y del Mediterráneo. Sus currys suaves,
+                estofados aromáticos y panes especiados ponen en valor la cocina
+                de mercado y el uso responsable de las especias.
+              </p>
+            </div>
+          </article>
 
-            <!-- 6. Akiko Mori -->
-            <article class="participant-card card participants__item">
-              <img
-                src="assets/images/participantes/akiko-mori.png"
-                alt="Retrato de la chef Akiko Mori"
-                class="participant-card__image card-img-top"
-                loading="lazy"
-              />
-              <div class="card-body participant-card__body">
-                <h2 class="participant-card__name card-title">Akiko Mori</h2>
-                <p class="participant-card__role">
-                  Chef invitada – Taller de cocina japonesa tradicional
-                </p>
-                <p class="participant-card__text card-text">
-                  Akiko Mori se especializa en cocina casera japonesa: caldos
-                  dashi, estofados ligeros y recetas que se preparan en las
-                  casas de invierno. En sus ponencias muestra cómo integrar
-                  técnicas japonesas en guisos occidentales sin perder el
-                  carácter de cada tradición.
-                </p>
-              </div>
-            </article>
-          </div>
+          <!-- 4. Ricardo Valdés -->
+          <article class="overflow-hidden rounded-2xl border border-albero bg-white shadow-lg shadow-card">
+            <img
+              src="assets/images/participantes/ricardo-valdes.png"
+              alt="Retrato del chef Ricardo Valdés"
+              class="h-56 w-full object-cover"
+              loading="lazy"
+            />
+            <div class="p-6">
+              <h2 class="font-heading text-2xl font-bold tracking-tight">
+                Ricardo Valdés
+              </h2>
+              <p class="mt-2 text-l font-base text-brand/80">
+                Asesor gastronómico y formador culinario
+              </p>
+              <p class="mt-4 text-l leading-relaxed text-tinta/80">
+                Con una trayectoria en restaurantes de Francia, Italia y España,
+                Ricardo Valdés se centra en reinterpretar platos clásicos con
+                técnicas modernas. Sus talleres se enfocan en fondos, salsas y
+                tiempos de cocción largos para conseguir sabores profundos y
+                equilibrados.
+              </p>
+            </div>
+          </article>
+
+          <!-- 5. Javier Montalvo -->
+          <article class="overflow-hidden rounded-2xl border border-albero bg-white shadow-lg shadow-card">
+            <img
+              src="assets/images/participantes/javier-montalvo.png"
+              alt="Retrato del chef Javier Montalvo"
+              class="h-56 w-full object-cover"
+              loading="lazy"
+            />
+            <div class="p-6">
+              <h2 class="font-heading text-2xl font-bold tracking-tight">
+                Javier Montalvo
+              </h2>
+              <p class="mt-2 text-l font-base text-brand/80">
+                Chef propietario – Bistró <em>Fogón de Barrio</em> (Madrid)
+              </p>
+              <p class="mt-4 text-l leading-relaxed text-tinta/80">
+                Javier Montalvo trabaja con pequeños productores y producto de
+                temporada para crear versiones modernas de platos de toda la vida.
+                Sus croquetas, guisos en raciones pequeñas y cazuelas compartidas
+                son el sello de su propuesta cercana y actual.
+              </p>
+            </div>
+          </article>
+
+          <!-- 6. Akiko Mori -->
+          <article class="overflow-hidden rounded-2xl border border-albero bg-white shadow-lg shadow-card">
+            <img
+              src="assets/images/participantes/akiko-mori.png"
+              alt="Retrato de la chef Akiko Mori"
+              class="h-56 w-full object-cover"
+              loading="lazy"
+            />
+            <div class="p-6">
+              <h2 class="font-heading text-2xl font-bold tracking-tight">
+                Akiko Mori
+              </h2>
+              <p class="mt-2 text-l font-base text-brand/80">
+                Chef invitada – Taller de cocina japonesa tradicional
+              </p>
+              <p class="mt-4 text-l leading-relaxed text-tinta/80">
+                Akiko Mori se especializa en cocina casera japonesa: caldos dashi,
+                estofados ligeros y recetas que se preparan en las casas de
+                invierno. En sus ponencias muestra cómo integrar técnicas
+                japonesas en guisos occidentales sin perder el carácter de cada
+                tradición.
+              </p>
+            </div>
+          </article>
+
         </div>
       </section>
     </main>
 
-    <include src="components/footer.html"></include>
+    <!-- FOOTER -->
+    <include src="./components/footer.html"></include>
+
+    <script type="module" src="./assets/scripts/main.js"></script>
   </body>
 </html>
