@@ -59,4 +59,30 @@
   .participant-card__text {
     @apply mt-4 text-base leading-relaxed text-tinta/80;
   }
+
+  /* Programación: tarjeta de sesión  */
+
+  .schedule-card {
+    @apply rounded-2xl border border-albero bg-white p-6 shadow-lg shadow-card;
+  }
+
+  .schedule-badge {
+    @apply flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand text-white font-bold;
+  }
+
+  .schedule-title {
+    @apply font-heading text-xl font-bold tracking-tight;
+  }
+
+  .schedule-meta {
+    @apply mt-2 text-sm font-semibold text-tinta/80;
+  }
+
+  .schedule-pill {
+    @apply ml-2 inline-flex rounded-full bg-olivo/15 px-2 py-0.5 text-xs font-semibold text-olivo;
+  }
+
+  .schedule-desc {
+    @apply mt-4 text-sm leading-relaxed text-tinta/80;
+  }
 }
