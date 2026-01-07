@@ -6,9 +6,7 @@
 
 @layer components {
 
-  /* --------------------------------------------------
-   * Botón principal
-   * -------------------------------------------------- */
+  /* Botón principal */
   .btn-primary {
     @apply inline-flex items-center justify-center
            px-4 py-2
@@ -19,9 +17,7 @@
            transition;
   }
 
-  /* --------------------------------------------------
-   * Tarjeta base
-   * -------------------------------------------------- */
+  /* Tarjeta base */
   .card {
     @apply rounded-xl
            border border-borde
@@ -30,9 +26,7 @@
            shadow-card;
   }
 
-  /* --------------------------------------------------
-   * Título de sección
-   * -------------------------------------------------- */
+  /* Título de sección */
   .section-title {
     @apply font-heading
            text-2xl
@@ -41,4 +35,28 @@
            text-tinta;
   }
 
+  /* Tarjeta completa de participante */
+  .participant-card {
+    @apply overflow-hidden rounded-2xl border border-albero bg-white shadow-lg shadow-card;
+  }
+
+  .participant-card__image {
+    @apply h-56 w-full object-cover;
+  }
+
+  .participant-card__body {
+    @apply p-6;
+  }
+
+  .participant-card__name {
+    @apply font-heading text-2xl font-bold tracking-tight;
+  }
+
+  .participant-card__role {
+    @apply mt-2 text-base font-base text-brand/80;
+  }
+
+  .participant-card__text {
+    @apply mt-4 text-base leading-relaxed text-tinta/80;
+  }
 }
