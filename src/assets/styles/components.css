@@ -62,27 +62,37 @@
 
   /* Programación: tarjeta de sesión  */
 
+  /* Tarjeta base (impares) */
   .schedule-card {
-    @apply rounded-2xl border border-albero bg-white p-6 shadow-lg shadow-card;
+    @apply
+      mx-3
+      flex items-start gap-5
+      rounded-lg bg-white px-6 py-5
+      shadow-sm
+
+      md:mx-0;
+  }
+
+  /* Tarjetas pares */
+  .schedule-card--alt {
+    @apply bg-piedra border border-tinta/40 shadow-none;
   }
 
   .schedule-badge {
-    @apply flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand text-white font-bold;
+    @apply
+      flex h-10 w-10 shrink-0 items-center justify-center
+      rounded-full bg-brand text-white font-bold;
   }
 
   .schedule-title {
-    @apply font-heading text-xl font-bold tracking-tight;
+    @apply font-heading text-xl font-bold tracking-tight text-tinta;
   }
 
   .schedule-meta {
-    @apply mt-2 text-sm font-semibold text-tinta/80;
-  }
-
-  .schedule-pill {
-    @apply ml-2 inline-flex rounded-full bg-olivo/15 px-2 py-0.5 text-xs font-semibold text-olivo;
+    @apply mt-1 text-sm font-semibold text-brand;
   }
 
   .schedule-desc {
-    @apply mt-4 text-sm leading-relaxed text-tinta/80;
+    @apply mt-3 text-sm leading-relaxed text-tinta/80;
   }
 }
