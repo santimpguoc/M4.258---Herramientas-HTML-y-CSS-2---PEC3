@@ -4,71 +4,67 @@
     <meta charset="utf-8" />
     <title>Jornadas de Cocina Tradicional - Portada</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="assets/styles/main.scss">
+
+    <!-- Tailwind v4 (entry CSS del proyecto) -->
+    <link rel="stylesheet" href="assets/styles/main.css" />
   </head>
 
-  <body class="page page--home">
+  <body class="home min-h-screen bg-piedra text-tinta font-base">
     <!-- HEADER -->
-    <include src="views/header.html"></include>
+    <include src="./components/header.html"></include>
 
     <!-- MAIN -->
-    <main class="page__main">
-      <section class="hero hero--landing">
-          <div class="hero__inner">
-            <!-- Frase principal -->
-            <header class="hero__content text-center">
-              <h1 class="hero__title hero__title--primary">
-                IV Jornadas de Cocina Tradicional
-              </h1>
-            </header>
+    <main>
+      <!-- HERO / LANDING -->
+      <section class="max-w-7xl mx-auto px-4 py-10 md:py-14">
+        <div class="flex flex-col items-center gap-8">
 
-            <!-- Imagen grande del guiso -->
-            <figure class="hero__media">
-              <img
-                src="assets/images/index-hero-guiso-tradicional.png"
-                alt="Plato de guiso tradicional servido en cazuela de barro"
-                class="hero__image img-fluid"
-                loading="lazy"
-              />
-            </figure>
+          <!-- Frase principal -->
+          <header class="text-center">
+            <h1 class="font-heading text-4xl text-brand font-bold tracking-tight md:text-5xl">
+              IV Jornadas de Cocina Tradicional
+            </h1>
+          </header>
 
-            <!-- Frase secundaria -->
-            <div class="hero__text-block text-center">
-              <h2 class="hero__title hero__title--secondary">
-                Sabores de siempre en la mesa de hoy
-              </h2>
-              <p class="hero__subtitle hero__subtitle--lead">
-                Tres días dedicados a la cocina de siempre: charlas con cocineros y
-                cocineras locales, talleres prácticos, degustaciones guiadas y espacio
-                para compartir recetas familiares.
-              </p>
-            </div>
+          <!-- Imagen grande del guiso -->
+          <figure class="w-full">
+            <img
+              src="assets/images/index-hero-guiso-tradicional.png"
+              alt="Plato de guiso tradicional servido en cazuela de barro"
+              class="mx-auto w-full max-w-2xl rounded-2xl border border-borde shadow-xl shadow-card"
+              loading="lazy"
+            />
+          </figure>
 
-            <!-- Información básica -->
-            <div class="hero__info card hero__info-card mx-auto">
-              <div class="card-body">
-                <p class="hero__info-line">
-                  <strong>Centro Cultural La Almazara</strong>
-                </p>
-                <p class="hero__info-line">
-                  <strong>23–25 de enero de 2026</strong>
-                </p>
-                <p class="hero__info-line">
-                  <strong>Mañanas y tardes</strong>
-                </p>
-                <p class="hero__info-line">
-                  <strong>Entrada gratuita</strong> · Plazas limitadas
-                </p>
-              </div>
-            </div>
-
+          <!-- Frase secundaria -->
+          <div class="max-w-5xl text-center">
+            <h2 class="font-heading text-4xl text-brand font-bold tracking-tight md:text-4xl">
+              Sabores de siempre en la mesa de hoy
+            </h2>
+            <p class="mt-4 text-base leading-relaxed text-tinta/80 md:text-xl">
+              Tres días dedicados a la cocina de siempre: charlas con cocineros y
+              cocineras locales, talleres prácticos, degustaciones guiadas y espacio
+              para compartir recetas familiares.
+            </p>
           </div>
+
+          <!-- Información básica (tarjeta) -->
+          <div class="w-full max-w-xs rounded-xl border border-brand/50 bg-white px-5 py-5 text-center shadow-xl shadow-card">
+            <p class="text-lg font-bold leading-loose md:text-l">Centro Cultural La Almazara</p>
+            <p class="text-lg font-bold leading-loose md:text-l">23–25 de enero de 2026</p>
+            <p class="text-lg font-bold leading-loose md:text-l">Mañanas y tardes</p>
+            <p class="text-lg font-bold leading-loose md:text-l">
+              Entrada gratuita · <span class="font-normal">Plazas limitadas</span>
+            </p>
+          </div>
+
+        </div>
       </section>
     </main>
 
     <!-- FOOTER -->
-    <include src="views/footer.html"></include>
+    <include src="./components/footer.html"></include>
 
-    <script type="module" src="assets/scripts/main.js"></script>
+    <script type="module" src="./assets/scripts/main.js"></script>
   </body>
 </html>

@@ -1,0 +1,16 @@
+<div class="form-field">
+  <label for="{{ id }}" class="form-label">
+    {{ label }} {{ requiredMark }}
+  </label>
+
+  <input
+    id="{{ id }}"
+    name="{{ name }}"
+    type="{{ type }}"
+    class="form-input"
+    {{ requiredAttr }}
+    autocomplete="{{ autocomplete }}"
+  />
+
+  <p class="form-help">{{ help }}</p>
+</div>

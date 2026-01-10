@@ -1,3 +1,9 @@
-// Importa el bundle completo de Bootstrap (incluye Popper + Collapse)
-import "bootstrap/dist/js/bootstrap.bundle.min.js";
+const toggleButton = document.getElementById("menuToggle");
+const mobileMenu = document.getElementById("mobileMenu");
 
+if (toggleButton && mobileMenu) {
+  toggleButton.addEventListener("click", () => {
+    const isOpen = mobileMenu.classList.toggle("hidden");
+    toggleButton.setAttribute("aria-expanded", String(!isOpen));
+  });
+}

@@ -1,0 +1,98 @@
+<header class="bg-white border-b border-borde transition-colors [.home_&]:bg-piedra [.home_&]:border-none">
+    <nav class="max-w-7xl mx-auto px-4 py-2">
+    <!-- Barra superior -->
+    <div class="flex items-center justify-between">
+      <!-- Logo + nombre -->
+      <a href="index.html" class="flex items-center gap-3">
+        <img
+          src="assets/images/logo.png"
+          alt="Logotipo de las Jornadas de Cocina Tradicional"
+          class="h-32 w-32 md:h-28 md:w-28"
+          width="128"
+          height="128"
+          loading="lazy"
+        />
+
+        <!-- Texto oculto en móvil -->
+        <span class="hidden font-heading text-2xl font-bold leading-none tracking-wide text-brand uppercase md:inline md:text-2xl">
+          Jornadas de Cocina Tradicional
+        </span>
+      </a>
+
+      <!-- Botón hamburguesa (solo móvil) -->
+      <button
+        id="menuToggle"
+        type="button"
+        class="inline-flex
+                items-center 
+                justify-center 
+                rounded-md 
+                border 
+                border-borde 
+                bg-arena 
+                p-3 
+                text-tinta 
+                hover:bg-piedra 
+                hover:border-brand
+                hover:border-2
+                md:hidden"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6 text-tinta"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+        >
+          <path d="M2 4h20" />
+          <path d="M2 12h20" />
+          <path d="M2 20h20" />
+        </svg>
+      </button>
+
+      <!-- Menú desktop -->
+      <ul class="hidden items-center gap-8 text-base text-tinta/90 md:flex md:text-xl">
+        <li>
+          <a class="font-medium text-tinta/90 underline-offset-8 decoration-2 hover:text-brand hover:underline" href="participantes.html">
+            Participantes
+          </a>
+        </li>
+        <li>
+          <a class="font-medium text-tinta/90 underline-offset-8 decoration-2 hover:text-brand hover:underline" href="programacion.html">
+            Programación
+          </a>
+        </li>
+        <li>
+          <a class="font-medium text-tinta/90 underline-offset-8 decoration-2 hover:text-brand hover:underline" href="inscripcion.html">
+            Inscripciones
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Menú móvil desplegable (centrado, sin tarjeta) -->
+    <div id="mobileMenu" class="hidden mt-4 md:hidden">
+      <ul class="flex flex-col items-center gap-4 text-center text-xl text-tinta/90">
+        <li>
+          <a class="font-medium underline-offset-8 decoration-2 hover:text-brand hover:underline" href="participantes.html">
+            Participantes
+          </a>
+        </li>
+        <li>
+          <a class="font-medium underline-offset-8 decoration-2 hover:text-brand hover:underline" href="programacion.html">
+            Programación
+          </a>
+        </li>
+        <li>
+          <a class="font-medium underline-offset-8 decoration-2 hover:text-brand hover:underline" href="inscripcion.html">
+            Inscripciones
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>

@@ -4,238 +4,181 @@
     <meta charset="utf-8" />
     <title>Programa · Jornadas de Cocina Tradicional</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="assets/styles/main.scss" />
+    <link rel="stylesheet" href="assets/styles/main.css" />
   </head>
 
-  <body class="page page--informacion">
-    <include src="views/header.html"></include>
+  <body class="min-h-screen bg-piedra text-tinta font-base">
+    <include src="./components/header.html"></include>
 
-    <main class="page__main">
-        <article class="article-page">
-            <!-- HERO / IMAGEN SUPERIOR --------------------------------------- -->
-            <section class="article-page__hero">
-                <figure class="article-hero">
-                    <img
-                        src="assets/images/programacion-cabecera-cocinando-guiso-v2.png"
-                        alt="Manos de cocinero removiendo un guiso tradicional en una cazuela"
-                        class="article-hero__image"
-                        loading="lazy"
-                    />
-                </figure>
-
-                <div class="container article-hero__content ">
-                    <h1 class="article-hero__title">
-                        Tres días de gastronomía, tradición y sabor
-                    </h1>
-                </div>
-            </section>
-
-            <hr class="article-page__separator" />
-
-            <section class="article-page__intro">
-                <div class="container">
-                    <div class="article-intro">
-                        <div class="article-intro__highlight">                            
-                            <h2 class="article-intro__title">
-                                Programa de actividades
-                            </h2>
-                            <h2 class="article-intro__title">
-                                23, 24 y 25 de enero de 2026
-                            </h2>
-                        </div>
-                        <div class="article-intro__body">
-                            <p>
-                                Durante tres días, las Jornadas de Cocina Tradicional reunirán
-                                a cocineros y cocineras que compartirán recetas, técnicas y
-                                experiencias alrededor de los guisos de siempre, la repostería
-                                casera y los productos de temporada.
-                            </p>
-                            <p>
-                                El programa combina demostraciones en directo, talleres
-                                participativos y pequeños coloquios en los que se hablará de
-                                memoria gastronómica, despensa local y formas de adaptar la
-                                cocina tradicional a la vida actual sin perder su esencia.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- PROGRAMA: 6 actividades en 3 días -->
-            <section class="article-page__schedule">
-            <div class="container">
-                
-
-                <div class="article-page__schedule-grid">
-                    <!-- 1 - Luis Herrera -->
-                    <article class="schedule-item">
-                        <div class="schedule-item__number">1</div>
-                        <div class="schedule-item__content">
-                            <h2 class="schedule-item__title">
-                                Luis Herrera · Potajes de ayer y de hoy
-                            </h2>
-                            <p class="schedule-item__meta" data-session-period="manana">
-                                Viernes 23 de enero · 11:00 h
-                            </p>
-                            <p class="schedule-item__description">
-                                Un recorrido por guisos de legumbre de distintas regiones,
-                                con trucos para adaptar tiempos de cocción, texturas y
-                                acompañamientos a las cocinas actuales sin perder la esencia
-                                de los platos de cuchara de toda la vida.
-                            </p>
-                        </div>
-                    </article>
-
-                    <!-- 2 - Marina Sanz -->
-                    <article class="schedule-item">
-                        <div class="schedule-item__number">2</div>
-                        <div class="schedule-item__content">
-                            <h2 class="schedule-item__title">
-                                Marina Sanz · Cocina de mercado en temporada de invierno
-                            </h2>
-                            <p class="schedule-item__meta" data-session-period="tarde">
-                                Viernes 23 de enero · 17:00 h
-                            </p>
-                            <p class="schedule-item__description">
-                                Taller práctico centrado en verduras de invierno, fondos de
-                                caldo caseros y maneras sencillas de aprovechar al máximo
-                                cada ingrediente, desde los potajes suaves hasta los salteados
-                                rápidos para el día a día.
-                            </p>
-                        </div>
-                    </article>
-
-                    <!-- 3 - Javier Montalvo -->
-                    <article class="schedule-item">
-                        <div class="schedule-item__number">3</div>
-                        <div class="schedule-item__content">
-                            <h2 class="schedule-item__title">
-                                Javier Montalvo · Tapas y cazuelas para compartir
-                            </h2>
-                            <p class="schedule-item__meta" data-session-period="manana">
-                                Sábado 24 de enero · 11:00 h
-                            </p>
-                            <p class="schedule-item__description">
-                                Cómo convertir guisos tradicionales en raciones pequeñas,
-                                tapas y cazuelas pensadas para compartir. Ideas para
-                                actualizar la presentación de platos clásicos en mesas
-                                informales, sin perder el sabor ni la calidez.
-                            </p>
-                        </div>
-                    </article>
-
-                    <!-- 4 - Ricardo Valdés -->
-                    <article class="schedule-item">
-                        <div class="schedule-item__number">4</div>
-                        <div class="schedule-item__content">
-                            <h2 class="schedule-item__title">
-                                Ricardo Valdés · Caldos, fondos y salsas con memoria
-                            </h2>
-                            <p class="schedule-item__meta" data-session-period="tarde">
-                                Sábado 24 de enero · 17:00 h
-                            </p>
-                            <p class="schedule-item__description">
-                                Sesión dedicada a la base de muchos platos: cómo preparar
-                                caldos, fondos oscuros y salsas tradicionales, con tiempos
-                                largos de cocción y técnicas suaves que concentran el sabor
-                                sin necesidad de recurrir a productos ultra procesados.
-                            </p>
-                        </div>
-                    </article>
-
-                    <!-- 5 - Daniel Okoro -->
-                    <article class="schedule-item">
-                        <div class="schedule-item__number">5</div>
-                        <div class="schedule-item__content">
-                            <h2 class="schedule-item__title">
-                                Daniel Okoro · Guisos del sur: especias y producto local
-                            </h2>
-                            <p class="schedule-item__meta" data-session-period="manana">
-                                Domingo 25 de enero · 11:00 h
-                            </p>
-                            <p class="schedule-item__description">
-                                Propuesta de guisos inspirados en la cocina de África
-                                occidental combinada con productos de proximidad. Nos
-                                detendremos en el uso responsable de las especias, las
-                                cocciones lentas y la importancia del pan y los cereales
-                                como parte del plato.
-                            </p>
-                        </div>
-                    </article>
-
-                    <!-- 6 · Akiko Mori -->
-                    <article class="schedule-item">
-                        <div class="schedule-item__number">6</div>
-                        <div class="schedule-item__content">
-                            <h2 class="schedule-item__title">
-                                Akiko Mori · Platos de cuchara japoneses para el invierno
-                            </h2>
-                            <p class="schedule-item__meta" data-session-period="tarde">
-                                Domingo 25 de enero · 17:00 h
-                            </p>
-                            <p class="schedule-item__description">
-                                Una introducción a la cocina casera japonesa a través de
-                                caldos dashi, estofados suaves y platos de cuchara pensados
-                                para compartir alrededor de la mesa. Veremos cómo integrar
-                                estas técnicas en cocinas occidentales de forma sencilla.
-                            </p>
-                        </div>
-                    </article>
-                </div>
-            </div>
+    <main>
+      <article>
+        <!-- HERO (imagen a ancho completo, sin borde redondeado visible) -->
+        <section>
+          <img
+            src="assets/images/programacion-cabecera-cocinando-guiso-v2.png"
+            alt="Manos de cocinero removiendo un guiso tradicional en una cazuela"
+            class="w-full"
+            loading="lazy"
+          />
         </section>
 
-        <!-- BLOQUE TEXTO DESTACADO -->
-        <section class="article-page__highlight">
-          <div class="container">
-            <div class="article-page__highlight-inner">
-              <p class="article-page__highlight-lead">
-                Una oportunidad para rendir homenaje a una cocina llena de
-                historia y significado.
+        <!-- TÍTULO centrado bajo el hero -->
+        <section class="max-w-7xl mx-auto px-4 pt-10">
+          <h1 class="text-center font-heading text-4xl font-bold tracking-tight text-brand md:text-5xl">
+            Tres días de gastronomía, tradición y sabor
+          </h1>
+        </section>
+
+        <!-- INTRO (2 columnas con separador fino arriba, como original) -->
+        <section class="max-w-5xl mx-auto px-4 pt-8">
+            <div class="border-t border-borde/70 pt-8">
+                <div class="grid gap-4 md:grid-cols-12">
+
+                    <!-- Columna izquierda -->
+                    <div class="md:col-span-4 text-center md:text-left">
+                        <h2 class="font-heading text-3xl font-bold text-brand">
+                            Programa de actividades
+                        </h2>
+                        <h2 class="mt-6 font-heading text-2xl font-bold text-brand">
+                            23, 24 y 25 de enero de 2026
+                        </h2>
+                </div>
+
+
+              <!-- Columna derecha -->
+              <div class="md:col-span-8 text-lg leading-relaxed text-tinta/85">
+                <p>
+                  Durante tres días, las Jornadas de Cocina Tradicional reunirán
+                  a cocineros y cocineras que compartirán recetas, técnicas y experiencias alrededor
+                  de los guisos de siempre, la repostería casera y los productos de temporada.
+                </p>
+                <p class="mt-6">
+                  El programa combina demostraciones en directo, talleres participativos y pequeños
+                  coloquios en los que se hablará de memoria gastronómica, despensa local y formas
+                  de adaptar la cocina tradicional a la vida actual sin perder su esencia.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- LISTA DE EVENTOS (columna centrada, NO grid) -->
+        <section class="max-w-5xl mx-auto px-4 py-14">
+          <div class="mx-auto flex max-w-5xl flex-col gap-6">
+
+            <include
+              src="./components/schedule-item.html"
+              locals='{
+                "cardClass":"schedule-card",
+                "num":"1",
+                "title":"Luis Herrera · Potajes de ayer y de hoy",
+                "meta":"Viernes 23 de enero · 11:00 h",
+                "desc":"Un recorrido por guisos de legumbre de distintas regiones, con trucos para adaptar tiempos de cocción, texturas y acompañamientos a las cocinas actuales sin perder la esencia de los platos de cuchara de toda la vida."
+              }'
+            ></include>
+
+            <include
+              src="./components/schedule-item.html"
+              locals='{
+                "cardClass":"schedule-card schedule-card--alt",
+                "num":"2",
+                "title":"Marina Sanz · Cocina de mercado en temporada de invierno",
+                "meta":"Viernes 23 de enero · 17:00 h",
+                "desc":"Taller práctico centrado en verduras de invierno, fondos de caldo caseros y maneras sencillas de aprovechar al máximo cada ingrediente, desde los potajes suaves hasta los salteados rápidos para el día a día."
+              }'
+            ></include>
+
+            <include
+              src="./components/schedule-item.html"
+              locals='{
+                "cardClass":"schedule-card",
+                "num":"3",
+                "title":"Javier Montalvo · Tapas y cazuelas para compartir",
+                "meta":"Sábado 24 de enero · 11:00 h",
+                "desc":"Cómo convertir guisos tradicionales en raciones pequeñas, tapas y cazuelas pensadas para compartir. Ideas para actualizar la presentación de platos clásicos en mesas informales, sin perder el sabor ni la calidez."
+              }'
+            ></include>
+
+            <include
+              src="./components/schedule-item.html"
+              locals='{
+                "cardClass":"schedule-card schedule-card--alt",
+                "num":"4",
+                "title":"Ricardo Valdés · Caldos, fondos y salsas con memoria",
+                "meta":"Sábado 24 de enero · 17:00 h",
+                "desc":"Sesión dedicada a la base de muchos platos: cómo preparar caldos, fondos oscuros y salsas tradicionales, con tiempos largos de cocción y técnicas suaves que concentran el sabor sin necesidad de recurrir a productos ultra procesados."
+              }'
+            ></include>
+
+            <include
+              src="./components/schedule-item.html"
+              locals='{
+                "cardClass":"schedule-card",
+                "num":"5",
+                "title":"Daniel Okoro · Guisos del sur: especias y producto local",
+                "meta":"Domingo 25 de enero · 11:00 h",
+                "desc":"Propuesta de guisos inspirados en la cocina de África occidental combinada con productos de proximidad. Nos detendremos en el uso responsable de las especias, las cocciones lentas y la importancia del pan y los cereales como parte del plato."
+              }'
+            ></include>
+
+            <include
+              src="./components/schedule-item.html"
+              locals='{
+                "cardClass":"schedule-card schedule-card--alt",
+                "num":"6",
+                "title":"Akiko Mori · Platos de cuchara japoneses para el invierno",
+                "meta":"Domingo 25 de enero · 17:00 h",
+                "desc":"Una introducción a la cocina casera japonesa a través de caldos dashi, estofados suaves y platos de cuchara pensados para compartir alrededor de la mesa. Veremos cómo integrar estas técnicas en cocinas occidentales de forma sencilla."
+              }'
+            ></include>
+
+          </div>
+        </section>
+
+        <!-- BLOQUE DESTACADO (2 columnas, sin card) -->
+        <section class="max-w-5xl mx-auto px-4 pb-16">
+          <div class="grid gap-8 md:grid-cols-12">
+            <div class="md:col-span-5">
+              <p class="font-heading text-2xl leading-snug text-brand md:text-2xl">
+                Una oportunidad para rendir homenaje a una cocina llena de historia y significado.
               </p>
-              <p class="article-page__highlight-text">
-                Durante las jornadas compartiremos recetas, recuerdos y técnicas
-                que han viajado de generación en generación. La intención es
-                crear un espacio donde cocinar, escuchar y aprender se conviertan
-                en una misma experiencia colectiva, abierta tanto a curiosos
+            </div>
+            <div class="md:col-span-7 text-lg leading-relaxed text-tinta/85">
+              <p>
+                Durante las jornadas compartiremos recetas, recuerdos y técnicas que han viajado de
+                generación en generación. La intención es crear un espacio donde cocinar, escuchar
+                y aprender se conviertan en una misma experiencia colectiva, abierta tanto a curiosos
                 como a amantes de la cocina tradicional.
               </p>
             </div>
           </div>
         </section>
 
-        <!-- BLOQUE FINAL: FOTO + TEXTO -->
-        <section class="article-page__closing">
-          <div class="container">
-            <div class="article-page__closing-inner row align-items-center">
-              <div class="col-12 col-lg-6 article-page__closing-media">
-                <figure class="article-page__closing-figure">
-                  <img
-                    src="assets/images/programacion-cocinando-pastel-v5.png"
-                    alt="Manos de repostero espolvoreando azúcar sobre un dulce tradicional"
-                    class="article-page__closing-image img-fluid"
-                    loading="lazy"
-                  />
-                </figure>
-              </div>
-              <div class="col-12 col-lg-6 article-page__closing-text">
-                <p>
-                  Además de los guisos y platos de cuchara, dedicaremos un
-                  espacio especial a la repostería tradicional: tartas,
-                  bizcochos y dulces que acompañan celebraciones, sobremesas y
-                  meriendas familiares. Exploraremos versiones más ligeras y
-                  adaptaciones sencillas para poder seguir disfrutándolos en el
-                  día a día.
-                </p>
-              </div>
+        <!-- BLOQUE FINAL (imagen izq + texto der, centrado) -->
+        <section class="max-w-5xl mx-auto px-4 pb-20">
+          <div class="grid items-center gap-10 md:grid-cols-12">
+            <div class="md:col-span-6">
+              <img
+                src="assets/images/programacion-cocinando-pastel-v5.png"
+                alt="Manos de repostero espolvoreando azúcar sobre un dulce tradicional"
+                class="mx-auto w-full max-w-xl"
+                loading="lazy"
+              />
+            </div>
+            <div class="md:col-span-6 text-lg leading-relaxed text-tinta/85">
+              <p>
+                Además de los guisos y platos de cuchara, dedicaremos un espacio especial a la
+                repostería tradicional: tartas, bizcochos y dulces que acompañan celebraciones,
+                sobremesas y meriendas familiares. Exploraremos versiones más ligeras y adaptaciones
+                sencillas para poder seguir disfrutándolos en el día a día.
+              </p>
             </div>
           </div>
         </section>
       </article>
     </main>
 
-    <include src="views/footer.html"></include>
-
-    <script type="module" src="assets/scripts/main.js"></script>
+    <include src="./components/footer.html"></include>
+    <script type="module" src="./assets/scripts/main.js"></script>
   </body>
 </html>

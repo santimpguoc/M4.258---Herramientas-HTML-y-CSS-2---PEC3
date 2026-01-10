@@ -4,415 +4,285 @@
     <meta charset="utf-8" />
     <title>Inscripción · Jornadas de Cocina Tradicional</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="assets/styles/main.scss" />
+    <link rel="stylesheet" href="assets/styles/main.css" />
   </head>
 
-  <body class="page page--inscripcion">
-    <!-- HEADER  -->
-    <include src="views/header.html"></include>
+  <body class="min-h-screen bg-piedra text-tinta font-base">
+    <!-- HEADER -->
+    <include src="./components/header.html"></include>
 
-    <main class="page__main">
-      <section class="page-registration registration py-5">
-        <div class="container">
-          <!-- Cabecera de la página -->
-          <header class="registration__header text-center mb-5">
-            <h1 class="registration__title">
-              Inscripción a las IV Jornadas de Cocina Tradicional
-            </h1>
-            <p class="registration__intro">
-              La inscripción es gratuita, pero el aforo es limitado. Rellena este
-              formulario para reservar tu plaza. Te enviaremos la confirmación
-              por correo electrónico.
-            </p>
-          </header>
+    <main>
+      <section class="max-w-7xl mx-auto px-4 py-10 md:py-14">
+        <!-- Cabecera -->
+        <header class="mx-auto mb-10 max-w-3xl text-center">
+          <h1 class="font-heading text-4xl font-bold tracking-tight text-brand md:text-4xl">
+            Inscripción a las IV Jornadas de Cocina Tradicional
+          </h1>
+          <p class="mt-4 text-lg leading-relaxed text-tinta/80 md:text-xl">
+            La inscripción es gratuita, pero el aforo es limitado. Rellena este
+            formulario para reservar tu plaza. Te enviaremos la confirmación
+            por correo electrónico.
+          </p>
+        </header>
 
-          <!-- Tarjeta principal del formulario -->
-          <div class="registration__card card shadow-sm mx-auto">
-            <div class="card-body">
-              <form
-                class="registration-form"
-                action="#"
-                method="post"
-                novalidate
-              >
-                <!-- ==========================
-                     1. DATOS PERSONALES
-                     ========================== -->
-                <fieldset class="registration-form__group mb-4">
-                  <legend class="registration-form__group-title h3 mb-3">
-                    1. Datos personales
-                  </legend>
+        <!-- Tarjeta formulario -->
+        <div class="form-card">
+          <form action="#" method="post" novalidate class="space-y-10">
 
-                  <div class="row g-3">
-                    <!-- Nombre y apellidos -->
-                    <div class="col-12">
-                      <div class="registration-form__field">
-                        <label
-                          for="nombre"
-                          class="registration-form__label form-label"
-                        >
-                          Nombre y apellidos <span aria-hidden="true">*</span>
-                        </label>
-                        <input
-                          type="text"
-                          class="registration-form__input form-control"
-                          id="nombre"
-                          name="nombre"
-                          required
-                          autocomplete="name"
-                        />
-                        <div class="form-text">
-                          Indica tu nombre tal y como quieres que aparezca en el
-                          listado de asistentes.
-                        </div>
-                      </div>
-                    </div>
+            <!-- ==========================
+                 1. DATOS PERSONALES
+                 ========================== -->
+            <fieldset class="form-section space-y-6">
+              <legend class="form-legend">1. Datos personales</legend>
 
-                    <!-- Email -->
-                    <div class="col-12 col-md-6">
-                      <div class="registration-form__field">
-                        <label
-                          for="email"
-                          class="registration-form__label form-label"
-                        >
-                          Correo electrónico <span aria-hidden="true">*</span>
-                        </label>
-                        <input
-                          type="email"
-                          class="registration-form__input form-control"
-                          id="email"
-                          name="email"
-                          required
-                          autocomplete="email"
-                        />
-                        <div class="form-text">
-                          Usaremos tu correo solo para enviar información
-                          relacionada con estas jornadas.
-                        </div>
-                      </div>
-                    </div>
+              <div class="grid gap-6">
+                <!-- Nombre y apellidos (include) -->
+                <include
+                  src="./components/form-field.html"
+                  locals='{
+                    "id":"nombre",
+                    "name":"nombre",
+                    "type":"text",
+                    "label":"Nombre y apellidos",
+                    "requiredMark":"*",
+                    "requiredAttr":"required",
+                    "autocomplete":"name",
+                    "help":"Indica tu nombre tal y como quieres que aparezca en el listado de asistentes."
+                  }'
+                ></include>
 
-                    <!-- Teléfono -->
-                    <div class="col-12 col-md-6">
-                      <div class="registration-form__field">
-                        <label
-                          for="telefono"
-                          class="registration-form__label form-label"
-                        >
-                          Teléfono móvil
-                        </label>
-                        <input
-                          type="tel"
-                          class="registration-form__input form-control"
-                          id="telefono"
-                          name="telefono"
-                          autocomplete="tel"
-                        />
-                        <div class="form-text">
-                          Opcional, por si necesitamos contactar contigo el día
-                          del evento.
-                        </div>
-                      </div>
-                    </div>
+                <div class="grid gap-6 md:grid-cols-2">
+                  <!-- Email (include) -->
+                  <include
+                    src="./components/form-field.html"
+                    locals='{
+                      "id":"email",
+                      "name":"email",
+                      "type":"email",
+                      "label":"Correo electrónico",
+                      "requiredMark":"*",
+                      "requiredAttr":"required",
+                      "autocomplete":"email",
+                      "help":"Usaremos tu correo solo para enviar información relacionada con estas jornadas."
+                    }'
+                  ></include>
 
-                    <!-- Ciudad -->
-                    <div class="col-12 col-md-6">
-                      <div class="registration-form__field">
-                        <label
-                          for="ciudad"
-                          class="registration-form__label form-label"
-                        >
-                          Ciudad / localidad
-                        </label>
-                        <input
-                          type="text"
-                          class="registration-form__input form-control"
-                          id="ciudad"
-                          name="ciudad"
-                          autocomplete="address-level2"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </fieldset>
-
-                <!-- ==========================
-                     2. PREFERENCIAS DE ASISTENCIA
-                     ========================== -->
-                <fieldset class="registration-form__group mb-4">
-                  <legend class="registration-form__group-title h3 mb-3">
-                    2. Preferencias de asistencia
-                  </legend>
-
-                  <!-- Días de asistencia -->
-                  <div class="registration-form__field mb-3">
-                    <p class="registration-form__label mb-2">
-                      ¿En qué días tienes previsto asistir?
-                    </p>
-
-                    <div class="row g-2">
-                      <div class="col-12 col-md-4">
-                        <div class="form-check registration-form__check">
-                          <input
-                            class="form-check-input"
-                            type="checkbox"
-                            value="2026-01-23"
-                            id="dia-23"
-                            name="dias[]"
-                          />
-                          <label
-                            class="form-check-label"
-                            for="dia-23"
-                          >
-                            Viernes 23 de enero
-                          </label>
-                        </div>
-                      </div>
-
-                      <div class="col-12 col-md-4">
-                        <div class="form-check registration-form__check">
-                          <input
-                            class="form-check-input"
-                            type="checkbox"
-                            value="2026-01-24"
-                            id="dia-24"
-                            name="dias[]"
-                          />
-                          <label
-                            class="form-check-label"
-                            for="dia-24"
-                          >
-                            Sábado 24 de enero
-                          </label>
-                        </div>
-                      </div>
-
-                      <div class="col-12 col-md-4">
-                        <div class="form-check registration-form__check">
-                          <input
-                            class="form-check-input"
-                            type="checkbox"
-                            value="2026-01-25"
-                            id="dia-25"
-                            name="dias[]"
-                          />
-                          <label
-                            class="form-check-label"
-                            for="dia-25"
-                          >
-                            Domingo 25 de enero
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Franja horaria preferente -->
-                  <div class="registration-form__field mb-3">
-                    <p class="registration-form__label mb-2">
-                      Franja horaria preferente
-                    </p>
-                    <div class="row g-2">
-                      <div class="col-12 col-md-4">
-                        <div class="form-check registration-form__check">
-                          <input
-                            class="form-check-input"
-                            type="radio"
-                            name="franja"
-                            id="franja-manana"
-                            value="manana"
-                          />
-                          <label
-                            class="form-check-label"
-                            for="franja-manana"
-                          >
-                            Mañana
-                          </label>
-                        </div>
-                      </div>
-                      <div class="col-12 col-md-4">
-                        <div class="form-check registration-form__check">
-                          <input
-                            class="form-check-input"
-                            type="radio"
-                            name="franja"
-                            id="franja-tarde"
-                            value="tarde"
-                          />
-                          <label
-                            class="form-check-label"
-                            for="franja-tarde"
-                          >
-                            Tarde
-                          </label>
-                        </div>
-                      </div>
-                      <div class="col-12 col-md-4">
-                        <div class="form-check registration-form__check">
-                          <input
-                            class="form-check-input"
-                            type="radio"
-                            name="franja"
-                            id="franja-ambas"
-                            value="ambas"
-                            checked
-                          />
-                          <label
-                            class="form-check-label"
-                            for="franja-ambas"
-                          >
-                            Ambas
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Taller de interés -->
-                  <div class="registration-form__field mb-3">
-                    <label
-                      for="taller"
-                      class="registration-form__label form-label"
-                    >
-                      Taller o temática que más te interesa
-                    </label>
-                    <select
-                      id="taller"
-                      name="taller"
-                      class="registration-form__select form-select"
-                    >
-                      <option value="" selected>
-                        Selecciona una opción
-                      </option>
-                      <option value="luis-herrera">
-                        Potajes de ayer y de hoy · Luis Herrera
-                      </option>
-                      <option value="marina-sanz">
-                        Cocina de mercado en invierno · Marina Sanz
-                      </option>
-                      <option value="javier-montalvo">
-                        Tapas y cazuelas para compartir · Javier Montalvo
-                      </option>
-                      <option value="ricardo-valdes">
-                        Caldos, fondos y salsas · Ricardo Valdés
-                      </option>
-                      <option value="daniel-okoro">
-                        Guisos del sur y especias · Daniel Okoro
-                      </option>
-                      <option value="akiko-mori">
-                        Platos de cuchara japoneses · Akiko Mori
-                      </option>
-                    </select>
-                  </div>
-
-                  <!-- Número de acompañantes -->
-                  <div class="registration-form__field mb-3">
-                    <label
-                      for="acompanantes"
-                      class="registration-form__label form-label"
-                    >
-                      Número de acompañantes
-                    </label>
-                    <select
-                      id="acompanantes"
-                      name="acompanantes"
-                      class="registration-form__select form-select"
-                    >
-                      <option value="0" selected>0 (solo yo)</option>
-                      <option value="1">1 acompañante</option>
-                      <option value="2">2 acompañantes</option>
-                      <option value="3">3 acompañantes</option>
-                    </select>
-                  </div>
-                </fieldset>
-
-                <!-- ==========================
-                     3. COMENTARIOS Y CONSENTIMIENTO
-                     ========================== -->
-                <fieldset class="registration-form__group mb-4">
-                  <legend class="registration-form__group-title h3 mb-3">
-                    3. Comentarios y consentimiento
-                  </legend>
-
-                  <!-- Alergias / necesidades -->
-                  <div class="registration-form__field mb-3">
-                    <label
-                      for="alergias"
-                      class="registration-form__label form-label"
-                    >
-                      Alergias o necesidades alimentarias
-                    </label>
-                    <textarea
-                      class="registration-form__textarea form-control"
-                      id="alergias"
-                      name="alergias"
-                      rows="3"
-                      placeholder="Por ejemplo: sin gluten, sin lactosa, alergia a frutos secos…"
-                    ></textarea>
-                  </div>
-
-                  <!-- Consentimiento obligatorio -->
-                  <div class="registration-form__field mb-2">
-                    <div class="form-check registration-form__check">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        value="1"
-                        id="acepta-privacidad"
-                        name="acepta_privacidad"
-                        required
-                      />
-                      <label
-                        class="form-check-label"
-                        for="acepta-privacidad"
-                      >
-                        He leído y acepto la política de protección de datos.
-                        Utilizaremos tu información únicamente para la gestión
-                        de estas jornadas.
-                      </label>
-                    </div>
-                  </div>
-
-                  <!-- Consentimiento opcional -->
-                  <div class="registration-form__field">
-                    <div class="form-check registration-form__check">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        value="1"
-                        id="acepta-comunicaciones"
-                        name="acepta_comunicaciones"
-                      />
-                      <label
-                        class="form-check-label"
-                        for="acepta-comunicaciones"
-                      >
-                        Quiero recibir información sobre futuras actividades
-                        relacionadas con la cocina tradicional.
-                      </label>
-                    </div>
-                  </div>
-                </fieldset>
-
-                <!-- Botón de envío -->
-                <div class="registration-form__actions text-center">
-                  <button
-                    type="submit"
-                    class="btn btn-primary registration-form__submit"
-                  >
-                    Enviar inscripción
-                  </button>
+                  <!-- Teléfono (include) -->
+                  <include
+                    src="./components/form-field.html"
+                    locals='{
+                      "id":"telefono",
+                      "name":"telefono",
+                      "type":"tel",
+                      "label":"Teléfono móvil",
+                      "requiredMark":"",
+                      "requiredAttr":"",
+                      "autocomplete":"tel",
+                      "help":"Opcional, por si necesitamos contactar contigo el día del evento."
+                    }'
+                  ></include>
                 </div>
-              </form>
+
+                <!-- Ciudad (include) -->
+                <include
+                  src="./components/form-field.html"
+                  locals='{
+                    "id":"ciudad",
+                    "name":"ciudad",
+                    "type":"text",
+                    "label":"Ciudad / localidad",
+                    "requiredMark":"",
+                    "requiredAttr":"",
+                    "autocomplete":"address-level2",
+                    "help":""
+                  }'
+                ></include>
+              </div>
+            </fieldset>
+
+            <!-- ==========================
+              2. PREFERENCIAS DE ASISTENCIA
+              ========================== -->
+            <fieldset class="space-y-6">
+              <legend class="form-legend">2. Preferencias de asistencia</legend>
+
+              <!-- Días de asistencia -->
+              <div class="space-y-3">
+                <p class="text-base font-semibold text-brand">
+                  ¿En qué días tienes previsto asistir?
+                </p>
+
+                <div class="grid gap-3 md:grid-cols-3">
+                  <label class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value="2026-01-23"
+                      id="dia-23"
+                      name="dias[]"
+                    />
+                    <span class="form-check-label">Viernes 23 de enero</span>
+                  </label>
+
+                  <label class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value="2026-01-24"
+                      id="dia-24"
+                      name="dias[]"
+                    />
+                    <span class="form-check-label">Sábado 24 de enero</span>
+                  </label>
+
+                  <label class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value="2026-01-25"
+                      id="dia-25"
+                      name="dias[]"
+                    />
+                    <span class="form-check-label">Domingo 25 de enero</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Franja horaria preferente -->
+              <div class="space-y-3">
+                <p class="text-sm font-semibold text-tinta">
+                  Franja horaria preferente
+                </p>
+
+                <div class="grid gap-3 md:grid-cols-3">
+                  <label class="form-radio">
+                    <input
+                      type="radio"
+                      name="franja"
+                      value="manana"
+                      class="form-radio-input"
+                    />
+                    <span class="form-radio-label">Mañana</span>
+                  </label>
+
+                  <label class="form-radio">
+                    <input
+                      type="radio"
+                      name="franja"
+                      value="tarde"
+                      class="form-radio-input"
+                    />
+                    <span class="form-radio-label">Tarde</span>
+                  </label>
+
+                  <label class="form-radio">
+                    <input
+                      type="radio"
+                      name="franja"
+                      value="ambas"
+                      class="form-radio-input"
+                      checked
+                    />
+                    <span class="form-radio-label">Ambas</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Taller -->
+              <div class="form-field">
+                <label for="taller" class="form-label">
+                  Taller o temática que más te interesa
+                </label>
+                <select id="taller" name="taller" class="form-select">
+                  <option value="" selected>Selecciona una opción</option>
+                  <option value="luis-herrera">Potajes de ayer y de hoy · Luis Herrera</option>
+                  <option value="marina-sanz">Cocina de mercado en invierno · Marina Sanz</option>
+                  <option value="javier-montalvo">Tapas y cazuelas para compartir · Javier Montalvo</option>
+                  <option value="ricardo-valdes">Caldos, fondos y salsas · Ricardo Valdés</option>
+                  <option value="daniel-okoro">Guisos del sur y especias · Daniel Okoro</option>
+                  <option value="akiko-mori">Platos de cuchara japoneses · Akiko Mori</option>
+                </select>
+              </div>
+
+              <!-- Número de acompañantes -->
+              <div class="form-field">
+                <label for="acompanantes" class="form-label">Número de acompañantes</label>
+                <select id="acompanantes" name="acompanantes" class="form-select">
+                  <option value="0" selected>0 (solo yo)</option>
+                  <option value="1">1 acompañante</option>
+                  <option value="2">2 acompañantes</option>
+                  <option value="3">3 acompañantes</option>
+                </select>
+              </div>
+            </fieldset>
+
+            <!-- ==========================
+                 3. COMENTARIOS Y CONSENTIMIENTO
+                 ========================== -->
+            <fieldset class="form-section space-y-6">
+              <legend class="form-legend">3. Comentarios y consentimiento</legend>
+
+              <!-- Alergias / necesidades -->
+              <div class="form-field">
+                <label for="alergias" class="form-label">
+                  Alergias o necesidades alimentarias
+                </label>
+                <textarea
+                  id="alergias"
+                  name="alergias"
+                  rows="3"
+                  class="form-textarea"
+                  placeholder="Por ejemplo: sin gluten, sin lactosa, alergia a frutos secos…"
+                ></textarea>
+              </div>
+
+              <!-- Consentimientos -->
+              <div class="space-y-3">
+                <label class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="1"
+                    id="acepta-privacidad"
+                    name="acepta_privacidad"
+                    required
+                  />
+                  <span class="form-check-label">
+                    He leído y acepto la política de protección de datos.
+                    Utilizaremos tu información únicamente para la gestión de estas jornadas.
+                  </span>
+                </label>
+
+                <label class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="1"
+                    id="acepta-comunicaciones"
+                    name="acepta_comunicaciones"
+                  />
+                  <span class="form-check-label">
+                    Quiero recibir información sobre futuras actividades relacionadas con la cocina tradicional.
+                  </span>
+                </label>
+              </div>
+            </fieldset>
+
+            <!-- Botón de envío -->
+            <div class="text-center">
+              <button type="submit" class="btn-primary px-6 py-3 text-base">
+                Enviar inscripción
+              </button>
             </div>
-          </div>
+
+          </form>
         </div>
       </section>
     </main>
 
-    <!-- FOOTER  -->
-    <include src="views/footer.html"></include>
+    <!-- FOOTER -->
+    <include src="./components/footer.html"></include>
 
-    <script type="module" src="assets/scripts/main.js"></script>
+    <script type="module" src="./assets/scripts/main.js"></script>
   </body>
 </html>
