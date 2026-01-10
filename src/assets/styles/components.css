@@ -95,4 +95,104 @@
   .schedule-desc {
     @apply mt-3 text-sm leading-relaxed text-tinta/80;
   }
+
+  /* Tarjeta del formulario (Inscripción) */
+ .form-card {
+    @apply mx-auto w-full max-w-4xl
+         rounded-xl border-2 border-albero bg-white p-6
+         shadow-card;
+  }
+
+  .form-section {
+    @apply border-l-4 border-albero pl-6;
+  }
+
+  /* Campos del formulario */
+  .form-field {
+    @apply flex flex-col gap-2;
+  }
+
+  .form-label {
+    @apply text-base font-semibold text-brand;
+  }
+
+  .form-input {
+    @apply w-full rounded-md border border-albero bg-white px-3 py-2
+           text-tinta outline-none
+           focus:border-brand focus:ring-2 focus:ring-brand/20;
+  }
+
+  .form-select {
+    @apply w-full rounded-md border border-albero bg-white px-3 py-2
+           text-tinta outline-none
+           focus:border-brand focus:ring-2 focus:ring-brand/20;
+  }
+
+  .form-textarea {
+    @apply w-full rounded-md border border-albero bg-white px-3 py-2
+           text-tinta outline-none
+           focus:border-brand focus:ring-2 focus:ring-brand/20;
+  }
+
+  .form-help {
+    @apply text-sm text-tinta/70;
+  }
+
+  /* Títulos de bloque (fieldset/legend) */
+  .form-legend {
+    @apply font-heading text-3xl font-bold text-tinta;
+  }
+
+  /* Checks*/
+  .form-check {
+    @apply flex items-start gap-3;
+  }
+
+  .form-check-input {
+    @apply mt-1 h-4 w-4 border-2 border-albero bg-piedra text-brand
+         focus:ring-2 focus:ring-brand/20;
+
+    /* Blindaje móvil */
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1rem;           /* 16px */
+    height: 1rem;          /* 16px */
+    aspect-ratio: 1 / 1;   /* fuerza cuadrado */
+    border-radius: 0.25rem;/* cuadrado suave */
+    box-sizing: border-box;
+    display: inline-block;
+  }
+
+  .form-check-input:checked {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3E%3C/svg%3E");
+  }
+
+  .form-check-label {
+    @apply text-sm leading-relaxed text-tinta;
+  }
+
+  /* Radios */
+  .form-radio {
+    @apply flex items-start gap-3;
+  }
+
+  .form-radio-input {
+    @apply mt-1 h-4 w-4 appearance-none rounded-full
+         border border-albero
+         bg-piedra
+         checked:bg-brand
+         checked:border-brand
+         focus:outline-none
+         focus:ring-2 focus:ring-brand/20
+         transition-colors
+         bg-no-repeat bg-center;
+  }
+
+  .form-radio-input:checked {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='4'/%3E%3C/svg%3E");
+  }
+
+  .form-radio-label {
+    @apply text-sm leading-relaxed text-tinta;
+  }
 }
