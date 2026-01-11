@@ -195,4 +195,57 @@
   .form-radio-label {
     @apply text-sm leading-relaxed text-tinta;
   }
+
+  /* =========================================================
+   * IA PAGE (namespaced)
+   * No afecta a PEC3 porque todas empiezan por .ai-
+   * ========================================================= */
+
+  .ai-page {
+    @apply bg-ai-bg text-ai-ink font-aibase;
+  }
+
+  .ai-shell {
+    @apply mx-auto max-w-aicontent px-6;
+  }
+
+  .ai-nav {
+    @apply w-full;
+  }
+
+  .ai-nav-inner {
+    @apply mx-auto flex max-w-aicontent items-center justify-between px-6 py-8;
+  }
+
+  .ai-nav-link {
+    @apply text-sm font-medium text-ai-ink/80 hover:text-ai-ink;
+  }
+
+  .ai-nav-cta {
+    @apply rounded-xl bg-ai-ink px-5 py-3 text-sm font-medium text-white;
+  }
+
+  .ai-hero-title {
+    @apply text-ai-hero font-extrabold tracking-tight;
+  }
+
+  .ai-hero-subtitle {
+    @apply mt-4 text-base text-ai-ink/50 sm:text-lg;
+  }
+
+  .ai-figure {
+    @apply overflow-hidden rounded-2xl;
+  }
+
+  .ai-section-title {
+    @apply text-ai-section font-extrabold tracking-tight;
+  }
+
+  .ai-card {
+    @apply rounded-2xl bg-white p-6 shadow-aicard;
+  }
+
+  .ai-avatar {
+    @apply h-10 w-10 rounded-full object-cover;
+  }
 }
